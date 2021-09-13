@@ -1,0 +1,57 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h1>Empleados</h1>
+    <div class="d-flex">
+      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">
+        Nuevo Empleado
+      </button>
+    </div>
+  </div>
+</nav>
+
+<table class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Email</th>
+      <th scope="col">Celular</th>
+      <th scope="col">Salario</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>John</td>
+      <td>Doeº</td>
+      <td>john.doe@micorreo.com</td>
+      <td>3334567890</td>
+      <td>100</td>
+      <td>
+        <button class="btn btn-info">Editar</button>
+        <button class="btn btn-danger">Eliminar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Nuevo Empleado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" (click)="agregarEmpleado()">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
