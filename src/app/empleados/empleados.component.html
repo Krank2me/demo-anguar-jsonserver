@@ -25,7 +25,7 @@
     <tr>
       <td>1</td>
       <td>John</td>
-      <td>Doeº</td>
+      <td>Doe</td>
       <td>john.doe@micorreo.com</td>
       <td>3334567890</td>
       <td>100</td>
@@ -46,7 +46,28 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" formControlName="nombre" class="form-control" id="nombre" aria-describedby="nombreHelp">
+          </div>
+          <div class="mb-3">
+            <label for="apellidos" class="form-label">Apellidos</label>
+            <input type="text" formControlName="apellidos" class="form-control" id="apellidos" aria-describedby="nombreHelp">
+          </div>
+          <div clss="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="text" formControlName="email" class="form-control" id="email" aria-describedby="nombreHelp">
+          </div>
+          <div class="mb-3">
+            <label for="celular" class="form-label">Celular</label>
+            <input type="text" formControlName="celular" class="form-control" id="celular" aria-describedby="nombreHelp">
+          </div>
+          <div class="mb-3">
+            <label for="salario" class="form-label">Salario</label>
+            <input type="text" formControlName="salario" class="form-control" id="salario" aria-describedby="nombreHelp">
+          </div>
+        </form>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
