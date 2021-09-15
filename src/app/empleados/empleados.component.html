@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <h1>Empleados</h1>
     <div class="d-flex">
-      <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">
+      <button (click)="clickAgregarEmpleado()" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-success">
         Nuevo Empleado
       </button>
     </div>
@@ -71,8 +71,8 @@
       </div>
       <div class="modal-footer">
         <button type="button" id="cancelar" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" (click)="agregarEmpleado()">Agregar</button>
-        <button type="button" class="btn btn-info" (click)="editarEmpleado()">Editar</button>
+        <button type="button" *ngIf="showAgregar" class="btn btn-primary" (click)="agregarEmpleado()">Agregar</button>
+        <button type="button" *ngIf="showEditar" class="btn btn-info" (click)="editarEmpleado()">Editar</button>
       </div>
     </div>
   </div>

@@ -12,6 +12,8 @@ export class EmpleadosComponent implements OnInit {
   formValue!: FormGroup;
   empleadoModel: EmpleadosModel = new EmpleadosModel();
   empleadoData!: any;
+  showAgregar!: boolean;
+  showEditar!: boolean;
 
   constructor(private formBuilder: FormBuilder, private apiService: ApiService) { }
 
@@ -24,6 +26,12 @@ export class EmpleadosComponent implements OnInit {
       salario: ['']
     });
     this.getEmpleados();
+  }
+
+  clickAgregarEmpleado() {
+    this.formValue.reset()
+    this.showAgregar = true;
+    this.showEditar = false;
   }
 
   agregarEmpleado() {
@@ -63,6 +71,8 @@ export class EmpleadosComponent implements OnInit {
   }
 
   onEmpleado(empleado: any) {
+    this.showAgregar = false;
+    this.showEditar = true ;
     this.empleadoModel.id = empleado.id;
     this.formValue.controls['nombre'].setValue(empleado.nombre);
     this.formValue.controls['apellidos'].setValue(empleado.apellidos);
