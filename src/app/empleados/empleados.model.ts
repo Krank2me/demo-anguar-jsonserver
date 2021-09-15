@@ -1,5 +1,5 @@
 export class EmpleadosModel {
-  id: number = Math.random();
+  id: number = Date.now();
   nombre: string = '';
   apellidos: string = '';
   email: string = '';

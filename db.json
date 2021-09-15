@@ -1,34 +1,15 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "id": 2,
-      "nombre": "Pedro",
-      "apellidos": "Perez",
-      "email": "pedro.perez@micorreo.com",
-      "celular": "3213445566",
+      "id": 1631676603595,
+      "nombre": "oso",
+      "apellidos": "peluche",
+      "email": "oso@micorreo.com",
+      "celular": "3214776633",
       "salario": "1000"
-    },
-    {
-      "id": 0.8669732928967067,
-      "nombre": "Pepe",
-      "apellidos": "Pepino",
-      "email": "pepe.pepino@micorreo.com",
-      "celular": "3218765433",
-      "salario": "2000"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
+  "comments": [],
   "profile": {
     "name": "typicode"
   }

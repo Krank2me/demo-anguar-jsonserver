@@ -15,4 +15,16 @@ export class ApiService {
       return res;
     }));
   }
+
+  getEmpleados() {
+    return this.http.get<any>('http://localhost:3000/posts')
+  }
+
+  borrarEmpleado(id: any) {
+    return this.http.delete<any>('http://localhost:3000/posts/' + id)
+  }
+
+  editarEmpleado(empleado: any) {
+    return this.http.put<any>('http://localhost:3000/posts/' + empleado.id, empleado);
+  }
 }

@@ -22,16 +22,16 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>John</td>
-      <td>Doe</td>
-      <td>john.doe@micorreo.com</td>
-      <td>3334567890</td>
-      <td>100</td>
+    <tr *ngFor="let empleado of empleadoData">
+      <td>{{empleado.id}}</td>
+      <td>{{empleado.nombre}}</td>
+      <td>{{empleado.apellidos}}</td>
+      <td>{{empleado.email}}</td>
+      <td>{{empleado.celular}}</td>
+      <td>{{empleado.salario}}</td>
       <td>
-        <button class="btn btn-info">Editar</button>
-        <button class="btn btn-danger">Eliminar</button>
+        <button (click)="onEmpleado(empleado)" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Editar</button>
+        <button (click)="deleteEmpleado(empleado)" class="btn btn-danger">Eliminar</button>
       </td>
     </tr>
   </tbody>
@@ -70,8 +70,9 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" id="cancelar" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
         <button type="button" class="btn btn-primary" (click)="agregarEmpleado()">Agregar</button>
+        <button type="button" class="btn btn-info" (click)="editarEmpleado()">Editar</button>
       </div>
     </div>
   </div>
