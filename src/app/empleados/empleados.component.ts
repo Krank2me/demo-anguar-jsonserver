@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms'
 import { EmpleadosModel } from './empleados.model';
-import { ApiService } from '../shared/api.service'
+import { ApiService } from '../shared/api.service';
 @Component({
   selector: 'app-empleados',
   templateUrl: './empleados.component.html',
@@ -70,7 +70,7 @@ export class EmpleadosComponent implements OnInit {
     })
   }
 
-  onEmpleado(empleado: any) {
+  onEmpleado(empleado: EmpleadosModel) {
     this.showAgregar = false;
     this.showEditar = true ;
     this.empleadoModel.id = empleado.id;

@@ -1,12 +1,12 @@
 {
   "posts": [
     {
-      "id": 1631677762774,
-      "nombre": "Panda",
-      "apellidos": "Test",
-      "email": "panda@micorreo.com",
-      "celular": "3212113322",
-      "salario": "1000"
+      "id": 1631848334096,
+      "nombre": "Peludo",
+      "apellidos": "Garcia",
+      "email": "peludo@micorreo.com",
+      "celular": "3214433222",
+      "salario": "2000"
     }
   ],
   "comments": [],
